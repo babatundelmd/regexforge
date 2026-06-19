@@ -2,8 +2,8 @@
   <!-- Header -->
   <header class="app-header">
     <div class="brand">
-      <div class="brand-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-      <div class="brand-title">RegexAutoAgent</div>
+      <div class="brand-icon"><i class="fa-solid fa-code"></i></div>
+      <div class="brand-title">RegexForge</div>
     </div>
     
     <div class="header-actions">
@@ -146,14 +146,14 @@
               [disabled]="!apiKey() || !goal()"
               (click)="startAgent()"
             >
-              <i class="fa-solid fa-play"></i> Run Autonomous Agent
+              <i class="fa-solid fa-play"></i> Run Generator Loop
             </button>
           } @else {
             <button 
               class="run-btn stop" 
               (click)="stopAgent()"
             >
-              <i class="fa-solid fa-stop"></i> Stop Agent Loop
+              <i class="fa-solid fa-stop"></i> Stop Loop
             </button>
           }
         </div>
@@ -163,7 +163,7 @@
     <!-- MIDDLE PANEL: Self-Correction Loop & Logs -->
     <div class="panel">
       <div class="panel-header">
-        <div class="panel-title"><i class="fa-solid fa-robot"></i> Agent Terminal & Diagnostics</div>
+        <div class="panel-title"><i class="fa-solid fa-terminal"></i> Terminal & Diagnostics</div>
       </div>
 
       <div class="panel-body">

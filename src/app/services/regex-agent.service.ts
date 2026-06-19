@@ -101,7 +101,7 @@ export class RegexAgentService {
     }));
     this.testCases.set(initialCases);
 
-    this.addLog('info', `🚀 Starting autonomous agent for goal: "${goal}"`);
+    this.addLog('info', `Starting generator loop for goal: "${goal}"`);
     this.addLog('info', `Initial user test suite size: ${initialCases.length} case(s).`);
 
     try {
@@ -365,11 +365,11 @@ Output MUST be a JSON object with the following format:
         success = true;
         this.status.set('success');
         this.isRunning.set(false);
-        this.addLog('success', `🎉 SUCCESS! All test cases passed in ${iteration} iteration(s).`);
+        this.addLog('success', `SUCCESS: All test cases passed in ${iteration} iteration(s).`);
       } else if (iteration >= maxIterations) {
         this.status.set('failed');
         this.isRunning.set(false);
-        this.addLog('error', `🛑 FAILED: Exceeded maximum iterations (${maxIterations}) without resolving all failures.`);
+        this.addLog('error', `FAILED: Exceeded maximum iterations (${maxIterations}) without resolving all failures.`);
       } else {
         this.addLog('info', 'Some cases failed. Initiating self-correction refinement...');
         // Wait briefly to show visual steps in UI
